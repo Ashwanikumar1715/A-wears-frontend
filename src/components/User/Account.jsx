@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Loader from "../Layouts/Loader";
 import MinCategory from "../Layouts/MinCategory";
 import MetaData from "../Layouts/MetaData";
+import Categories from "../Layouts/Categories";
 
 const Account = () => {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ const Account = () => {
         <Loader />
       ) : (
         <>
-          <MinCategory />
+          <Categories/>
           <main className="mx-2  mt-20  sm:mt-0">
             {/* <!-- row --> */}
             <div className="flex flex-row gap-3.5 sm:w-11/12 sm:mt-4 m-auto mb-7">
@@ -41,7 +42,7 @@ const Account = () => {
                 {/* <!-- edit info container --> */}
                 <div className="flex flex-col gap-12 m-4 sm:mx-8 sm:my-6">
                   {/* <!-- personal info --> */}
-                  <div className="flex flex-col gap-5 items-start">
+                  <div className="flex flex-col gap-5 items-start ">
                     <span className="font-medium text-lg">
                       Personal Information{" "}
                       <Link
@@ -177,49 +178,11 @@ const Account = () => {
                       best during the checkout process.
                     </p>
 
-                    <h4 className="text-sm font-medium">
-                      Can I return an item if it doesn't fit or if I change my
-                      mind?
-                    </h4>
-                    <p className="text-sm">
-                      Yes, A-Wears offers a hassle-free return policy. If you're
-                      not satisfied with your purchase or if the item doesn't
-                      fit, you can initiate a return within a specified period.
-                      Check our "Return Policy" for more details.
-                    </p>
-
-                    <h4 className="text-sm font-medium">
-                      How can I contact A-Wears customer support?
-                    </h4>
-                    <p className="text-sm">
-                      For any queries or assistance, you can reach out to our
-                      customer support team through the "Contact Us" page on the
-                      A-Wears website. We are available via email and live chat
-                      to provide prompt help.
-                    </p>
-
-                    <h4 className="text-sm font-medium">
-                      Are there any discounts or promotions available on
-                      A-Wears?
-                    </h4>
-                    <p className="text-sm">
-                      A-Wears regularly offers exciting discounts and promotions
-                      on various products. Stay updated by subscribing to our
-                      newsletter or visiting the "Offers" section to discover
-                      the latest deals and exclusive offers.
-                    </p>
+                   
                   </div>
 
                   {/* <!-- faqs --> */}
 
-                  {/* <!-- deactivate account --> */}
-                  <Link
-                    className="text-sm text-primary-blue font-medium"
-                    to="/"
-                  >
-                    Deactivate Account
-                  </Link>
-                  {/* <!-- deactivate account --> */}
                 </div>
                 {/* <!-- edit info container --> */}
 

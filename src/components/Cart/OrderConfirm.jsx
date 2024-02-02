@@ -4,6 +4,7 @@ import PriceSidebar from './PriceSidebar';
 import Stepper from './Stepper';
 import { useNavigate } from 'react-router-dom';
 import MetaData from '../Layouts/MetaData';
+import { Button } from '@mui/material';
 
 const OrderConfirm = () => {
 
@@ -31,7 +32,15 @@ const OrderConfirm = () => {
                         </div>
                         <div className="flex justify-between items-center mt-4 bg-white px-6 py-3 rounded-b-sm">
                             <p className="text-sm">Order confirmation email will be sent to <span className="font-medium">{user.email}</span></p>
-                            <button onClick={() => { navigate('/process/payment') }} className="bg-primary-blue px-6 py-2 text-white font-medium rounded-sm shadow hover:shadow-lg uppercase">continue</button>
+                            <Button onClick={() => { navigate('/process/payment') }} 
+                            variant="contained"
+                            className="w-[30%] mt-5"
+                            sx={{
+                              mt: "1rem",
+                              px: "2.5rem",
+                              py: ".7rem",
+                              bgcolor: "#9155fd",
+                            }}>continue</Button>
                         </div>
                     </Stepper>
                 </div>

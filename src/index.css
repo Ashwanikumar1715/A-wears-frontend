@@ -5,7 +5,9 @@
 
 body {
     background-color: #f1f3f6;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: medium;
+    font-weight: bolder
    
 }
 
@@ -24,3 +26,17 @@ body {
     background-repeat: no-repeat;
 }
 /* login signup sidebar bg image */
+
+.sm\:hidden {
+  display: none;
+}
+
+/* Styles for small screens (max-width: 640px in this example) */
+@media (max-width: 640px) {
+  .sm\:hidden {
+    display: block;
+  }
+
+  /* Add styles to position the toggled sidebar */
+  /* ... */
+}

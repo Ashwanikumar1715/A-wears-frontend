@@ -177,7 +177,7 @@ const Payment = () => {
                     className={`${
                       payDisable
                         ? "bg-primary-grey cursor-not-allowed"
-                        : "bg-primary-blue cursor-pointer"
+                        : "bg-[#9155fd] cursor-pointer"
                     } w-1/2 sm:w-1/4 my-2 py-3 font-medium text-white shadow hover:shadow-lg rounded-sm uppercase outline-none`}
                   />
                 </form>

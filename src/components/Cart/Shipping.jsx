@@ -12,6 +12,7 @@ import { saveShippingInfo } from "../../actions/cartAction";
 import { useNavigate } from "react-router-dom";
 import MetaData from "../Layouts/MetaData";
 import states from "../../utils/states";
+import { Button } from "@mui/material";
 
 const Shipping = () => {
   const dispatch = useDispatch();
@@ -136,12 +137,19 @@ const Shipping = () => {
                     </FormControl>
                   </div>
 
-                  <button
+                  <Button
                     type="submit"
-                    className="bg-primary-blue w-full sm:w-1/3 my-2 py-3.5 text-sm font-medium text-white shadow hover:shadow-lg rounded-sm uppercase outline-none"
+                    variant="contained"
+                    className="w-full mt-5"
+                    sx={{
+                      mt: "1rem",
+                      px: "1rem",
+                      py: ".7rem",
+                      bgcolor: "#9155fd",
+                    }}
                   >
                     save and deliver here
-                  </button>
+                  </Button>
                 </form>
               </div>
             </Stepper>

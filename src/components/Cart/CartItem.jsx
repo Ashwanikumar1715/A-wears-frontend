@@ -56,7 +56,7 @@ const CartItem = ({
         className="flex flex-col sm:flex-row gap-5 items-stretch w-full group"
       >
         {/* <!-- product image --> */}
-        <div className="w-full sm:w-1/6 h-28 flex-shrink-0">
+        <div className="w-full sm:w-[12rem] h-[12rem] flex-shrink-0">
           <img
             draggable="false"
             className="h-full w-full object-contain"
@@ -75,17 +75,15 @@ const CartItem = ({
                 {name.length > 42 ? `${name.substring(0, 42)}...` : name}
               </p>
               <span className="text-sm text-gray-500">Seller: {seller}</span>
+              
             </div>
-
-            <div className="flex flex-col sm:gap-2">
-              <p className="text-sm">
+            <p className="text-sm">
                 Delivery by {getDeliveryDate()} |{" "}
                 <span className="text-primary-green">Free</span>{" "}
                 <span className="line-through">₹{quantity * 40}</span>
               </p>
-              <span className="text-xs text-red-500">
-                7 Days Replacement Policy
-              </span>
+            <div className="flex flex-col sm:gap-2">
+             
             </div>
           </div>
           {/* <!-- product title --> */}

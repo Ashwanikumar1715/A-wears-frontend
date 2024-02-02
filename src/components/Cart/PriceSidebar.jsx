@@ -1,5 +1,11 @@
-
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 const PriceSidebar = ({ cartItems }) => {
+    const navigate = useNavigate();
+    const placeOrderHandler = () => {
+        navigate("/login?redirect=shipping");
+      };
+    
     return (
         <div className="flex sticky top-16 sm:h-screen flex-col sm:w-4/12 sm:px-1">
 
@@ -19,7 +25,23 @@ const PriceSidebar = ({ cartItems }) => {
                     <p className="font-medium text-primary-green">You will save ₹{cartItems.reduce((sum, item) => sum + ((item.cuttedPrice * item.quantity) - (item.price * item.quantity)), 0).toLocaleString()} on this order</p>
 
                 </div>
-
+  {/* <!-- place order btn --> */}
+  <div className="flex justify-end">
+  <Button
+             onClick={placeOrderHandler}
+              variant="contained"
+              className="w-full mt-5"
+              sx={{
+                mt: "1rem",
+                px: "2.5rem",
+                py: ".7rem",
+                bgcolor: "#9155fd",
+              }}
+            >
+              Checkout
+            </Button>
+              </div>
+              {/* <!-- place order btn --> */}
             </div>
             {/* <!-- nav tiles --> */}
 
